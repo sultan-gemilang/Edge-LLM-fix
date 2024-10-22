@@ -54,6 +54,9 @@ def get_pruned_model(model, tokenizer, args, logger):
     if args.save_pruned_model:
         os.makedirs(args.pruned_model_path, exist_ok=True)
         
+        model.save_pretrained(os.path.join(args.pruned_model_path, 'model'))
+        tokenizer.save_pretrained(os.path.join(args.pruned_model_path, 'tokenizer'))
+        
         torch.save({
             'model': model,
             'tokenizer': tokenizer,
