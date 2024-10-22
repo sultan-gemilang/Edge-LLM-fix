@@ -25,9 +25,9 @@ CUDA_VISIBLE_DEVICES="0" python main.py \
     --group_by_length \
     --logging_strategy steps \
     --remove_unused_columns False \
-    --do_train \
-    --do_eval \
-    --do_wikitext2_ppl \
+    --do_train False \
+    --do_eval False \
+    --do_wikitext2_ppl False \
     --lora_r 8 \
     --lora_alpha 16 \
     --bf16 \

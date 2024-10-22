@@ -1,4 +1,4 @@
-transformers
+transformers == 4.35.2
 accelerate
 datasets
 sentencepiece
@@ -8,7 +8,7 @@ Ninja
 peft 
 tqdm 
 bitsandbytes
-shutil 
+evaluate
 huggingface_hub
 wandb
 pandas
