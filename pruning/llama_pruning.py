@@ -49,7 +49,7 @@ def llama_sequential(model, dataloader, dev, nsamples, layer_pruning_ratios, log
     layers[0] = Catcher(layers[0])
     for batch in dataloader:
         try:
-            model(batch[0].to(dev), model_status="train")
+            model(batch[0].to(dev)) #, model_status="train"
         except ValueError:
             pass
 
